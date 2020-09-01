@@ -15,7 +15,6 @@ export default {
   background: #589ff0;
   width: 100%;
   height: 100vh;
-  padding: 15px;
   display: flex;
   justify-content: center;
   align-items: center;

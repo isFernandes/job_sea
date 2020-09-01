@@ -1,0 +1,77 @@
+<template>
+  <div class="container">
+    <div class="navbar"></div>
+    <div class="align-row">
+      <div class="aDefinir"></div>
+      <div class="feed">
+        <div class="content-feed"></div>
+        <div class="content-feed"></div>
+        <div class="content-feed"></div>
+        <div class="content-feed"></div>
+      </div>
+      <div class="mural"></div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.container {
+  width: 100%;
+  height: 100%;
+  background-color:#ff5f6f;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(35, 35, 119);
+  align-self: flex-start;
+  margin-top: -5px;
+  flex: 1;
+}
+
+.feed {
+  padding: 15px 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: yellow;
+  height: 100%;
+  align-self: center;
+  width: 50%;
+  margin-left: 2%;
+  flex-wrap: wrap;
+}
+
+.content-feed {
+  align-self: flex-start;
+  width: 95%;
+  height: 20%;
+  background-color: teal;
+  border: tomato solid 1px;
+}
+
+.mural {
+  margin: 7% 0 0 0.5%;
+  background-color: green;
+  width: 23%;
+  height: 30%;
+}
+.align-row {
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+  width: 100%;
+  height: 90%;
+}
+
+.aDefinir {
+  background-color: rgb(124, 21, 110);
+  width: 23%;
+  height: 100%;
+}
+</style>

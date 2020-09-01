@@ -8,9 +8,11 @@
       <input class="form-input" type="password" id="input-password" placeholder="Senha" />
       <div class="button-area">
         <button type="submit" class="text-dark btn btn-link">
-          <span>Esqueceu a Senha?</span>
+          <a href="#/recover">
+            <span>Esqueceu a Senha?</span>
+          </a>
         </button>
-        <button type="submit" class="btn btn-primary input-group-btn">
+        <button @click="goToPage('feed')" type="submit" class="btn btn-primary input-group-btn">
           <span>Entrar</span>
         </button>
       </div>
@@ -24,6 +26,16 @@
     </blockquote>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    goToPage(route) {
+      this.$router.push(`/${route}`);
+    },
+  },
+};
+</script>
 
 <style scoped>
 .login-field {
@@ -41,8 +53,12 @@
   width: 45%;
 }
 
-.button-area{
-    margin: 8px;
-    justify-content: space-between;
+.button-area {
+  margin: 8px;
+  justify-content: space-between;
+}
+
+a {
+  color: #3b4351;
 }
 </style>
