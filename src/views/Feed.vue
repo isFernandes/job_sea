@@ -4,21 +4,95 @@
     <div class="align-row">
       <div class="aDefinir"></div>
       <div class="feed">
-        <div class="content-feed"></div>
-        <div class="content-feed"></div>
-        <div class="content-feed"></div>
-        <div class="content-feed"></div>
+        <div class="filterbar">BARRA DE FILTRO AQUI</div>
+        <Crew v-for="c in crews" :key="c.id" :crew="c" class="content-feed" />
       </div>
       <div class="mural"></div>
     </div>
   </div>
 </template>
 
+
+<script>
+import Crew from "../components/Crew";
+export default {
+  data() {
+    return {
+      crews: [
+        {
+          rating: 98,
+          nomes: {
+            nome1: "Leandro",
+            nome2: "Renato",
+            nome3: "Rafael",
+            nome4: "Marcos",
+            nome5: "Roberto",
+          },
+          funcoes:
+            "Desenvolvedor, Designer Thing, Ux Senior, Marketing, Fullstack",
+          value: 2350,
+        },
+        {
+          rating: 89,
+          nomes: {
+            nome1: "Leandro",
+            nome2: "Renato",
+            nome3: "Rafael",
+            nome4: "Marcos",
+            nome5: "Roberto",
+          },
+          funcoes:
+            "Desenvolvedor, Designer Thing, Ux Senior, Marketing, Fullstack",
+          value: 2250,
+        },
+        {
+          rating: 35,
+          nomes: {
+            nome1: "Leandro",
+            nome2: "Renato",
+            nome3: "Rafael",
+            nome4: "Marcos",
+            nome5: "Roberto",
+          },
+          funcoes:
+            "Desenvolvedor, Designer Thing, Ux Senior, Marketing, Fullstack",
+          value: 1350,
+        },
+        {
+          rating: 41,
+          nomes: {
+            nome1: "Leandro",
+            nome2: "Renato",
+            nome3: "Rafael",
+            nome4: "Marcos",
+            nome5: "Roberto",
+          },
+          funcoes:
+            "Desenvolvedor, Designer Thing, Ux Senior, Marketing, Fullstack",
+          value: 1980,
+        },
+      ],
+    };
+  },
+  components: {
+    Crew,
+  },
+};
+</script>
+
 <style scoped>
+.filterbar {
+  max-height: 100%;
+  width: 100%;
+  margin: 0 -2% 5px -2%;
+  background-color: aqua;
+  flex-direction: row;
+}
+
 .container {
   width: 100%;
   height: 100%;
-  background-color:#ff5f6f;
+  background-color: #ff5f6f;
   padding: 0;
   justify-content: center;
   align-items: center;
@@ -34,10 +108,8 @@
 }
 
 .feed {
-  padding: 15px 0 0 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
   background-color: yellow;
   height: 100%;
@@ -48,9 +120,7 @@
 }
 
 .content-feed {
-  align-self: flex-start;
-  width: 95%;
-  height: 20%;
+  align-self: center;
   background-color: teal;
   border: tomato solid 1px;
 }

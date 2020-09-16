@@ -5,6 +5,7 @@ import SingUp from "@/views/Singup";
 import RememberPassword from "@/views/RememberPassword";
 import Feed from "@/views/Feed";
 
+
 Vue.use(VueRouter);
 
 const routes = [
