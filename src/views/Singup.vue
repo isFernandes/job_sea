@@ -100,7 +100,6 @@
 }
 .button-area {
   margin: 8px;
-  justify-content: space-between;
-  padding: 0 0 0 75%;
 }
+
 </style>
