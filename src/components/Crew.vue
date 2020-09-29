@@ -25,12 +25,13 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: lightgray;
+  background-color:#b2b7c486;
   border-radius: 10px;
   padding: 4px;
   flex: 1;
   align-items: center;
   max-height: 20%;
+  max-width: 100%;
   margin: 0 2% 15px 2%;
 }
 
@@ -40,7 +41,7 @@ export default {
   padding: 15px;
   width: 70px;
   border-radius: 800%;
-  background-color: crimson;
+  background-color: #ebeef5;
   text-align: center;
   justify-content: center;
   align-items: center;
